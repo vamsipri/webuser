@@ -19,26 +19,16 @@ function UserList() {
     // const users=JSON.parse(data)
     // let users=[];
 
-//  useEffect(
-//         () =>{
-//             console.log("use effect called")
-//             const data=localStorage.getItem("users")
-//             console.log(data)
+  useEffect(
+         () =>{
+           //  console.log("use effect called")
+            const data=localStorage.getItem("users")
+            console.log(data)
             
-//             setUsers(data)
-//             console.log("now users")
-//             console.log(users)            //  users=JSON.parse(data)
-//         },[]
-//     )
-useEffect(() => {
-    const data=localStorage.getItem('data')
-    if(data) {
-        users(JSON.parse(data))
-    }
-},[])
-useEffect(() =>{
-    localStorage.setItem('data',JSON.stringify(users))
-})
+            setUsers(data)
+            console.log("now users")
+            console.log(users)                   },[]
+    )
 
     return (
         <div className="container">
